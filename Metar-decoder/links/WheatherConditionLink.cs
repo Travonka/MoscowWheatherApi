@@ -16,8 +16,10 @@ namespace Metar_decoder.links
             string regexPattern = "(" + descriptionRegex + conditionRegex + ")";
             Regex regex = new Regex(regexPattern);
             MatchCollection match = regex.Matches(rawData);
-
-            return (wheaterConstructor(match[0].Groups), regex.Replace(rawData,"",1));
+            if (match.Count != 0) {
+                return (wheaterConstructor(match[0].Groups), regex.Replace(rawData, "", 1));
+            }
+            else { return ( new WheaterConditions(), rawData); }
         }
         private string conditionRegexConstructor()
         {
