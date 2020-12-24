@@ -9,7 +9,9 @@ namespace MoscowWheatherApi.Controllers
 {
     [ApiController]
     public class WheatherController : ControllerBase
-    {
+    {/// <summary>
+    /// May be add sync one?
+    /// </summary>
         WheatherHub wheatherHub;
         public WheatherController()
         {
