@@ -1,6 +1,1 @@
-before_build:
-  - nuget restore
 
-build:
-  project: Metar-decoder.sln
-  verbosity: minimal
