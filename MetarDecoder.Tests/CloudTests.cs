@@ -16,7 +16,7 @@ namespace MetarDecoder.Tests
             //Arrange
             Cloud cloud = new Cloud()
             { coverege = CloudCoverege.SCT,
-                lowerBoundaryAltitude = 2000
+                lowerBoundaryAltitude = 20000
             };
 
             CloudLink cloudLink = new CloudLink();
