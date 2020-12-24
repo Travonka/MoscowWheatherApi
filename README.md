@@ -1,5 +1,4 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ey4q6h98wy6wn12r?svg=true)](https://ci.appveyor.com/project/Travonka/moscowwheatherapi)
-<br>
 ![AppVeyor tests](https://img.shields.io/appveyor/tests/Travonka/moscowwheatherapi)
 <br>
 # MoscowWheatherApi
