@@ -10,7 +10,7 @@ namespace MoscowWheatherApi.Controllers
     [ApiController]
     public class WheatherController : ControllerBase
     {/// <summary>
-    /// Some text changed
+    /// Some text changed _2
     /// </summary>
         WheatherHub wheatherHub;
         public WheatherController()
