@@ -4,17 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
 using System.IO;
+using System.Threading;
+
 namespace MoscowWheatherApi.Utils
 {
     public class GetMetar
     {
         private string adress = "https://tgftp.nws.noaa.gov/data/observations/metar/stations/UUEE.TXT";
-        public string Get()
+        public async Task<string> Get()
         {
             string metar = "";
             var request = WebRequest.Create(adress);
-            var response = request.GetResponse();
-            using (Stream stream = response.GetResponseStream())
+            var response = await request.GetResponseAsync();
+            await using (Stream stream = response.GetResponseStream())
             {
                 using (StreamReader reader = new StreamReader(stream))
                 {
@@ -22,6 +24,7 @@ namespace MoscowWheatherApi.Utils
                     metar = reader.ReadLine();
                 }
             }
+            
             response.Close();
             return metar;
         }

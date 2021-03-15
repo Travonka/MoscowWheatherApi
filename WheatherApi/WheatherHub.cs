@@ -23,9 +23,9 @@ namespace MoscowWheatherApi
             }
             return instance;
         }
-        public string GetWheather()
+        public async Task<string> GetWheather()
         {
-            string metar = getMetar.Get();
+            string metar = await getMetar.Get();
             var decodedMetar = MetarDecoder.Decode(metar);
             return JsonConvert.SerializeObject(decodedMetar);
         }

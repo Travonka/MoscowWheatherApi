@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,9 +17,10 @@ namespace MoscowWheatherApi.Controllers
         }
         [HttpGet]
         [Route("/Get")]
-        public string GetWheather()
-        {   
-            return wheatherHub.GetWheather();
-        }
+        public async Task<string> GetWheather()
+        {
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+            return await wheatherHub.GetWheather();
+        } 
     }
 }
