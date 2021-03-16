@@ -21,7 +21,6 @@ namespace MoscowWheatherApi.Controllers
         [Route("/Get")]
         public async Task<string> GetWheather()
         {
-            Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
             return await wheatherHub.GetWheather();
         } 
     }

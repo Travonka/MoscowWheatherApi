@@ -20,8 +20,8 @@ namespace MoscowWheatherApi.Utils
             {
                 using (StreamReader reader = new StreamReader(stream))
                 {
-                    reader.ReadLine();
-                    metar = reader.ReadLine();
+                    await reader.ReadLineAsync();
+                    metar = await reader.ReadLineAsync();
                 }
             }
             
