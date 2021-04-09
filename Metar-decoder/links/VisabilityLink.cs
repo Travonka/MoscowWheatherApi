@@ -7,6 +7,7 @@ using Entities;
 using Metar_decoder.Extensions;
 namespace Metar_decoder.links
 {
+   
     public class VisabilityLink : ILink
     {
         private const string visabilityRegex = @"(\b([0-9]{4})\b|\b(([0-9]{4})([A-Z]{2}))\b)";

@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using Entities;
 namespace Metar_decoder.links
 {
+    
     class DateLink : ILink
     {
         const string dateRegex = "[0-9]{6}[Z]{1}";

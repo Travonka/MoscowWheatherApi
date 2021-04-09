@@ -7,6 +7,7 @@ using Entities;
 using Metar_decoder.Extensions;
 namespace Metar_decoder.links
 {
+    
     public class WheatherConditionLink : ILink
     {
         public (object, string) Parse(string rawData)

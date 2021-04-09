@@ -10,7 +10,7 @@ namespace MoscowWheatherApi.Utils
 {
     public class GetMetar
     {
-        private string adress = "https://tgftp.nws.noaa.gov/data/observations/metar/stations/UUEE.TXT";
+        private const string adress = "https://tgftp.nws.noaa.gov/data/observations/metar/stations/UUEE.TXT";
         public async Task<string> Get()
         {
             string metar = "";

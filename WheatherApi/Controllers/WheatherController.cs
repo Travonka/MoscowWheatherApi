@@ -21,7 +21,7 @@ namespace MoscowWheatherApi.Controllers
         [Route("/Get")]
         public async Task<string> GetWheather()
         {
-            return await wheatherHub.GetWheather();
+            return await wheatherHub.GetWheather().ConfigureAwait(false);
         } 
     }
 }

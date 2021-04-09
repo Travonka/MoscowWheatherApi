@@ -6,6 +6,7 @@ using Entities;
 using System.Text.RegularExpressions;
 namespace Metar_decoder.links
 {
+    
     public class TemperatureLink : ILink
     {
         private string temperatureRegex = @"\b((M?[0-9]{2})/(M?[0-9]{2}))\b";

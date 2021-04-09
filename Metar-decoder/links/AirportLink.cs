@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Entities;
 using Metar_decoder.interfaces;
-using Entities;
 using System.Text.RegularExpressions;
+
 namespace Metar_decoder.links
-{
+{   
     public class AirportLink : ILink
     {
         const string airportRegex = @"[A-Z]{4}";

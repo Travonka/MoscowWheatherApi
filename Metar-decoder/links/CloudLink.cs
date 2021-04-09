@@ -6,7 +6,8 @@ using Entities;
 using System.Text.RegularExpressions;
 using Metar_decoder.Extensions;
 namespace Metar_decoder.links
-{   
+{
+    
     public class CloudLink : ILink
     {
         const string cloudRegex = @"\b(([A-Z]{3}[0-9]{3})|(VV[0-9]{3}))\b";
@@ -14,6 +15,10 @@ namespace Metar_decoder.links
         {
             Regex regex = new Regex(cloudRegex);
             MatchCollection match = regex.Matches(rawData);
+            if (match.Count == 0)
+            {
+                return ((new Cloud(), rawData));
+            }
             return (CloudConstructor(match[0].Groups), regex.Replace(rawData, "", 1));
         }
         private Cloud CloudConstructor(GroupCollection group)

@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using Metar_decoder.Extensions;
 namespace Metar_decoder.links
 {
+    
     public class AtmosphericPressureLink : ILink
     {
         const string pressureRegex = @"\b(Q[0-9]{4})\b";

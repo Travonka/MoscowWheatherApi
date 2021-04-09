@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using Metar_decoder.Extensions;
 namespace Metar_decoder.links
 {
+    
     public class WindLink : ILink
     {
         private const string windRegex = @"(VRB?|([0-9]{3}))([0-9]{2})(G[0-9]{2})?(KMH|MPS|KT)\s(([0-9]{3})V([0-9]{3})\s)?"; 
